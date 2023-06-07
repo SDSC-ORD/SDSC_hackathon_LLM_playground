@@ -7,7 +7,7 @@ Right now the total image size is around 7GB without including the model. The mo
 Follow the notebook tutorial to run your first model. 
 
 **Links below only valid after starting the jupyter server.**
-- [Alpaca Test]("http://127.0.0.1:8888/lab/tree/notebooks/000.Alpaca_test.ipynb")
+- ![Alpaca Test]("http://127.0.0.1:8888/lab/tree/notebooks/000.Alpaca_test.ipynb")
 
 ## How to use it?
 
