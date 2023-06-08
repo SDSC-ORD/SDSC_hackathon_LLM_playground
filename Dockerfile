@@ -151,6 +151,7 @@ RUN apt-get update && apt-get install -y \
     apt-utils \
     vim \
     git \
+    htop \
     nano
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
