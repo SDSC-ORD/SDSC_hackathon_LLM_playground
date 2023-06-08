@@ -168,6 +168,9 @@ RUN pip install torch torchvision torchaudio --index-url https://download.pytorc
 
 # Transformers
 RUN pip install transformers
+
+# fastchat
+RUN pip install fschat
     
 # Jupyter 
 RUN pip install jupyterlab ipywidgets
