@@ -8,6 +8,9 @@ Follow the notebook tutorial to run your first model.
 
 **Links below only valid after starting the jupyter server.**
 - [Alpaca Test](http://127.0.0.1:8888/lab/tree/notebooks/000.Alpaca_test.ipynb)
+- [Fast Chat Langchain Test](http://127.0.0.1:8888/lab/tree/notebooks/001.FastChat_test.ipynb)
+- [Music Gen Test](http://127.0.0.1:8888/lab/tree/notebooks/002.MusicGen_test.ipynb)
+- [Stable Diffusion Test](http://127.0.0.1:8888/lab/tree/notebooks/003.StableDiffusion_test.ipynb)
 
 ## How to use it?
 
