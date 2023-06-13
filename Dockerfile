@@ -172,6 +172,8 @@ RUN pip install transformers
 
 # fastchat
 RUN pip install fschat
+
+RUN pip install openai audiocraft accelerate ftfy
     
 # Jupyter 
 RUN pip install jupyterlab ipywidgets
