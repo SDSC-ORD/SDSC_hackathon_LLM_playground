@@ -19,7 +19,11 @@ docker pull caviri/sdsc-llm-playground:latest
 ```
 
 ```
-docker run --rm -it  --gpus all -p 8888:8888 -e JUPYTER_TOKEN=TEST caviri/sdsc-llm-playground:latest
+docker pull caviri/sdsc-llm-playground:nonroot_user
+```
+
+```
+docker run --rm -it  --gpus all -p 8888:8888 -e JUPYTER_TOKEN=TEST caviri/sdsc-llm-playground:nonroot_user
 ```
 
 Enter in the server in: http://127.0.0.1:8888/ and use the password defined
