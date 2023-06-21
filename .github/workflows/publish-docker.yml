@@ -4,7 +4,7 @@ on:
   release:
     type: [published]
   push:
-    branches: [master]
+    branches: [main]
 
 env:
   REGISTRY: ghcr.io
