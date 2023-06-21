@@ -1,0 +1,36 @@
+name: Create and publish SDSC hackathon LLM playground Docker image
+
+on:
+  release:
+    type: [published]
+  push:
+    branches: [master]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Build Container image
+        run: docker build . --file Dockerfile tag $IMAGE_NAME
+        
+      - name: Log into GtiHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login https://ghcr.io -u ${{ github.actor }} --password-stdin
+        
+      - name: Push image to Github Container Registry
+        run: | 
+              IMAGE_ID=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME:${{ github.run_id }}
+              docker push $IMAGE_ID
+            
+        
+        
