@@ -28,6 +28,12 @@ docker run --rm -it  --gpus all -p 8888:8888 -e JUPYTER_TOKEN=TEST caviri/sdsc-l
 
 Enter in the server in: http://127.0.0.1:8888/ and use the password defined
 
+## How to use this on runai?
+
+```
+runai submit testllm4 -i caviri/sdsc-llm-playground:nonroot_user -e JUPYTER_TOKEN=TEST --service-type=portforward --port 8888:8888 --attach --interactive --node-type "A100" -g 0.2
+```
+
 ## How to build this docker?
 
 ```

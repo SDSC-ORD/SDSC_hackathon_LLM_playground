@@ -138,8 +138,6 @@ RUN set -x && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
-
-
 ### The above license application ends here. 
 #####################################################################
 
@@ -173,14 +171,15 @@ RUN pip install transformers
 # fastchat
 RUN pip install fschat
 
-RUN pip install openai audiocraft accelerate ftfy
+RUN pip install openai audiocraft accelerate ftfy diffusers
     
 # Jupyter 
-RUN pip install jupyterlab ipywidgets
+RUN pip install jupyterlab ipywidgets  
 
 COPY ./app /app
 COPY ./test /test
 COPY ./notebooks ${HOME}/notebooks
+RUN chmod -R 777 ${HOME}/notebooks
 
 USER ${NB_UID}
 
